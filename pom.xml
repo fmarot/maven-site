@@ -23,298 +23,132 @@
   <parent>
     <groupId>org.apache.maven</groupId>
     <artifactId>maven-parent</artifactId>
-    <version>17-SNAPSHOT</version>
-    <relativePath>../pom/maven/pom.xml</relativePath>
+    <version>31-SNAPSHOT</version>
   </parent>
 
-  <groupId>org.apache.maven</groupId>
   <artifactId>maven-site</artifactId>
   <version>1.0</version>
   <packaging>pom</packaging>
 
   <name>Apache Maven Site</name>
-  <url>http://maven.apache.org/</url>
-
-  <mailingLists>
-    <!-- duplication from components - temporary until the site layout is clearer -->
-    <mailingList>
-      <name>Maven User List</name>
-      <subscribe>users-subscribe@maven.apache.org</subscribe>
-      <unsubscribe>users-unsubscribe@maven.apache.org</unsubscribe>
-      <post>users@maven.apache.org</post>
-      <archive>http://mail-archives.apache.org/mod_mbox/maven-users</archive>
-      <otherArchives>
-        <otherArchive>http://www.mail-archive.com/users@maven.apache.org/</otherArchive>
-        <otherArchive>http://old.nabble.com/Maven---Users-f178.html</otherArchive>
-        <otherArchive>http://markmail.org/list/org.apache.maven.users</otherArchive>
-      </otherArchives>
-    </mailingList>
-    <mailingList>
-      <name>Maven Developer List</name>
-      <subscribe>dev-subscribe@maven.apache.org</subscribe>
-      <unsubscribe>dev-unsubscribe@maven.apache.org</unsubscribe>
-      <post>dev@maven.apache.org</post>
-      <archive>http://mail-archives.apache.org/mod_mbox/maven-dev</archive>
-      <otherArchives>
-        <otherArchive>http://www.mail-archive.com/dev@maven.apache.org/</otherArchive>
-        <otherArchive>http://old.nabble.com/Maven-Developers-f179.html</otherArchive>
-        <otherArchive>http://markmail.org/list/org.apache.maven.dev</otherArchive>
-      </otherArchives>
-    </mailingList>
-    <mailingList>
-      <name>Maven Issues List</name>
-      <subscribe>issues-subscribe@maven.apache.org</subscribe>
-      <unsubscribe>issues-unsubscribe@maven.apache.org</unsubscribe>
-      <archive>http://mail-archives.apache.org/mod_mbox/maven-issues/</archive>
-      <otherArchives>
-        <otherArchive>http://www.mail-archive.com/issues@maven.apache.org</otherArchive>
-        <otherArchive>http://old.nabble.com/Maven---Issues-f15573.html</otherArchive>
-        <otherArchive>http://markmail.org/list/org.apache.maven.issues</otherArchive>
-      </otherArchives>
-    </mailingList>
-    <mailingList>
-      <name>Maven Commits List</name>
-      <subscribe>commits-subscribe@maven.apache.org</subscribe>
-      <unsubscribe>commits-unsubscribe@maven.apache.org</unsubscribe>
-      <archive>http://mail-archives.apache.org/mod_mbox/maven-commits</archive>
-      <otherArchives>
-        <otherArchive>http://www.mail-archive.com/commits@maven.apache.org</otherArchive>
-        <otherArchive>http://old.nabble.com/Maven---Commits-f15575.html</otherArchive>
-        <otherArchive>http://markmail.org/list/org.apache.maven.commits</otherArchive>
-      </otherArchives>
-    </mailingList>
-
-    <!-- duplication from doxia - temporary until they inherit properly -->
-    <mailingList>
-      <name>Doxia Developer List</name>
-      <post>doxia-dev@maven.apache.org</post>
-      <subscribe>doxia-dev-subscribe@maven.apache.org</subscribe>
-      <unsubscribe>doxia-dev-unsubscribe@maven.apache.org</unsubscribe>
-      <archive>http://mail-archives.apache.org/mod_mbox/maven-doxia-dev/</archive>
-      <otherArchives>
-        <otherArchive>http://www.mail-archive.com/doxia-dev@maven.apache.org</otherArchive>
-        <otherArchive>http://old.nabble.com/Doxia---dev-f11816.html</otherArchive>
-        <otherArchive>http://markmail.org/list/org.apache.maven.doxia-dev</otherArchive>
-      </otherArchives>
-    </mailingList>
-    <mailingList>
-      <name>Doxia User List</name>
-      <post>doxia-users@maven.apache.org</post>
-      <subscribe>doxia-users-subscribe@maven.apache.org</subscribe>
-      <unsubscribe>doxia-users-unsubscribe@maven.apache.org</unsubscribe>
-      <archive>http://mail-archives.apache.org/mod_mbox/maven-doxia-users/</archive>
-      <otherArchives>
-        <otherArchive>http://www.mail-archive.com/doxia-users@maven.apache.org</otherArchive>
-        <otherArchive>http://old.nabble.com/Doxia---Users-f14483.html</otherArchive>
-        <otherArchive>http://markmail.org/list/org.apache.maven.doxia-users</otherArchive>
-      </otherArchives>
-    </mailingList>
-    <mailingList>
-      <name>Doxia Commits List</name>
-      <subscribe>doxia-commits-subscribe@maven.apache.org</subscribe>
-      <unsubscribe>doxia-commits-unsubscribe@maven.apache.org</unsubscribe>
-      <archive>http://mail-archives.apache.org/mod_mbox/maven-doxia-commits/</archive>
-      <otherArchives>
-        <otherArchive>http://www.mail-archive.com/doxia-commits@maven.apache.org</otherArchive>
-        <otherArchive>http://markmail.org/list/org.apache.maven.doxia-commits</otherArchive>
-      </otherArchives>
-    </mailingList>
-
-    <!-- duplication from scm - temporary until they inherit properly -->
-    <mailingList>
-      <name>SCM Developer List</name>
-      <subscribe>scm-dev-subscribe@maven.apache.org</subscribe>
-      <unsubscribe>scm-dev-unsubscribe@maven.apache.org</unsubscribe>
-      <post>scm-dev@maven.apache.org</post>
-      <archive>http://mail-archives.apache.org/mod_mbox/maven-scm-dev</archive>
-      <otherArchives>
-        <otherArchive>http://www.mail-archive.com/scm-dev@maven.apache.org</otherArchive>
-        <otherArchive>http://markmail.org/list/org.apache.maven.scm-dev</otherArchive>
-      </otherArchives>
-    </mailingList>
-    <mailingList>
-      <name>SCM User List</name>
-      <subscribe>scm-users-subscribe@maven.apache.org</subscribe>
-      <unsubscribe>scm-users-unsubscribe@maven.apache.org</unsubscribe>
-      <post>scm-users@maven.apache.org</post>
-      <archive>http://mail-archives.apache.org/mod_mbox/maven-scm-users</archive>
-      <otherArchives>
-        <otherArchive>http://www.mail-archive.com/scm-users@maven.apache.org</otherArchive>
-        <otherArchive>http://markmail.org/list/org.apache.maven.scm-users</otherArchive>
-      </otherArchives>
-    </mailingList>
-    <mailingList>
-      <name>SCM Commits List</name>
-      <subscribe>scm-commits-subscribe@maven.apache.org</subscribe>
-      <unsubscribe>scm-commits-unsubscribe@maven.apache.org</unsubscribe>
-      <archive>http://mail-archives.apache.org/mod_mbox/maven-scm-commits</archive>
-      <otherArchives>
-        <otherArchive>http://www.mail-archive.com/scm-commits@maven.apache.org</otherArchive>
-        <otherArchive>http://markmail.org/list/org.apache.maven.scm-commits</otherArchive>
-      </otherArchives>
-    </mailingList>
-
-    <!-- duplication from surefire - temporary until they inherit properly -->
-    <mailingList>
-      <name>Surefire User List</name>
-      <post>surefire-users@maven.apache.org</post>
-      <subscribe>surefire-users-subscribe@maven.apache.org</subscribe>
-      <unsubscribe>surefire-users-unsubscribe@maven.apache.org</unsubscribe>
-      <archive>http://mail-archives.apache.org/mod_mbox/maven-surefire-users/</archive>
-      <otherArchives>
-        <otherArchive>http://www.mail-archive.com/surefire-users@maven.apache.org</otherArchive>
-        <otherArchive>http://markmail.org/list/org.apache.maven.surefire-users</otherArchive>
-      </otherArchives>
-    </mailingList>
-    <mailingList>
-      <name>Surefire Developer List</name>
-      <post>surefire-dev@maven.apache.org</post>
-      <subscribe>surefire-dev-subscribe@maven.apache.org</subscribe>
-      <unsubscribe>surfire-dev-unsubscribe@maven.apache.org</unsubscribe>
-      <archive>http://mail-archives.apache.org/mod_mbox/maven-surefire-dev/</archive>
-      <otherArchives>
-        <otherArchive>http://www.mail-archive.com/surefire-dev@maven.apache.org</otherArchive>
-        <otherArchive>http://markmail.org/list/org.apache.maven.surefire-dev</otherArchive>
-      </otherArchives>
-    </mailingList>
-    <mailingList>
-      <name>Surefire Commits List</name>
-      <subscribe>surefire-commits-subscribe@maven.apache.org</subscribe>
-      <unsubscribe>surefire-commits-unsubscribe@maven.apache.org</unsubscribe>
-      <archive>http://mail-archives.apache.org/mod_mbox/maven-surefire-commits/</archive>
-      <otherArchives>
-        <otherArchive>http://www.mail-archive.com/surefire-commits@maven.apache.org</otherArchive>
-        <otherArchive>http://markmail.org/list/org.apache.maven.surefire-commits</otherArchive>
-      </otherArchives>
-    </mailingList>
-
-    <!-- duplication from wagon - temporary until they inherit properly -->
-    <mailingList>
-      <name>Wagon User List</name>
-      <post>wagon-users@maven.apache.org</post>
-      <subscribe>wagon-users-subscribe@maven.apache.org</subscribe>
-      <unsubscribe>wagon-users-unsubscribe@maven.apache.org</unsubscribe>
-      <archive>http://mail-archives.apache.org/mod_mbox/maven-wagon-users/</archive>
-      <otherArchives>
-        <otherArchive>http://www.mail-archive.com/wagon-users@maven.apache.org</otherArchive>
-        <otherArchive>http://old.nabble.com/Wagon---Users-f13870.html</otherArchive>
-        <otherArchive>http://markmail.org/list/org.apache.maven.wagon-users</otherArchive>
-      </otherArchives>
-    </mailingList>
-    <mailingList>
-      <name>Wagon Developer List</name>
-      <post>wagon-dev@maven.apache.org</post>
-      <subscribe>wagon-dev-subscribe@maven.apache.org</subscribe>
-      <unsubscribe>wagon-dev-unsubscribe@maven.apache.org</unsubscribe>
-      <archive>http://mail-archives.apache.org/mod_mbox/maven-wagon-dev/</archive>
-      <otherArchives>
-        <otherArchive>http://www.mail-archive.com/wagon-dev@maven.apache.org</otherArchive>
-        <otherArchive>http://old.nabble.com/Wagon---Dev-f13871.html</otherArchive>
-        <otherArchive>http://markmail.org/list/org.apache.maven.wagon-dev</otherArchive>
-      </otherArchives>
-    </mailingList>
-    <mailingList>
-      <name>Wagon Commits List</name>
-      <subscribe>wagon-commits-subscribe@maven.apache.org</subscribe>
-      <unsubscribe>wagon-commits-unsubscribe@maven.apache.org</unsubscribe>
-      <archive>http://mail-archives.apache.org/mod_mbox/maven-wagon-commits/</archive>
-      <otherArchives>
-        <otherArchive>http://markmail.org/list/org.apache.maven.wagon-commits</otherArchive>
-      </otherArchives>
-    </mailingList>
-
-    <!-- duplication from parent pom - temporary until they inherit properly -->
-    <mailingList>
-      <name>Maven Announcements List</name>
-      <post>announce@maven.apache.org</post>
-      <subscribe>announce-subscribe@maven.apache.org</subscribe>
-      <unsubscribe>announce-unsubscribe@maven.apache.org</unsubscribe>
-      <archive>http://mail-archives.apache.org/mod_mbox/maven-announce/</archive>
-      <otherArchives>
-        <otherArchive>http://www.mail-archive.com/announce@maven.apache.org</otherArchive>
-        <otherArchive>http://old.nabble.com/Maven-Announcements-f15617.html</otherArchive>
-        <otherArchive>http://markmail.org/list/org.apache.maven.announce</otherArchive>
-      </otherArchives>
-    </mailingList>
-    <mailingList>
-      <name>Maven Notifications List</name>
-      <subscribe>notifications-subscribe@maven.apache.org</subscribe>
-      <unsubscribe>notifications-unsubscribe@maven.apache.org</unsubscribe>
-      <archive>http://mail-archives.apache.org/mod_mbox/maven-notifications/</archive>
-      <otherArchives>
-        <otherArchive>http://www.mail-archive.com/notifications@maven.apache.org</otherArchive>
-        <otherArchive>http://old.nabble.com/Maven---Notifications-f15574.html</otherArchive>
-        <otherArchive>http://markmail.org/list/org.apache.maven.notifications</otherArchive>
-      </otherArchives>
-    </mailingList>
-  </mailingLists>
+  <url>https://maven.apache.org/</url>
 
   <!-- repeated here so that maven-site is not appended -->
   <scm>
-    <connection>scm:svn:http://svn.apache.org/repos/asf/maven/site/trunk/</connection>
+    <connection>scm:svn:https://svn.apache.org/repos/asf/maven/site/trunk/</connection>
     <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/site/trunk/</developerConnection>
-    <url>http://svn.apache.org/viewcvs.cgi/maven/site/trunk/</url>
+    <url>https://svn.apache.org/viewvc/maven/site/trunk/</url>
   </scm>
+
   <issueManagement>
     <system>jira</system>
-    <url>http://jira.codehaus.org/browse/MNGSITE</url>
+    <url>https://issues.apache.org/jira/browse/MNGSITE</url>
   </issueManagement>
-  <distributionManagement>
-    <site>
-      <id>apache.website</id>
-      <url>${site.deploy.url}</url>
-    </site>
-  </distributionManagement>
 
   <properties>
-    <current20xVersion>2.0.11</current20xVersion>
-    <current20xReleaseDate>25 Feb 2010</current20xReleaseDate>
-    <current22xVersion>2.2.1</current22xVersion>
-    <current22xReleaseDate>11 August 2009</current22xReleaseDate>
-    <currentStableVersion>3.0</currentStableVersion>
-    <currentStableReleaseDate>7 September 2010</currentStableReleaseDate>
-    <currentDevelopmentVersion>3.0-beta-3</currentDevelopmentVersion>
-    <currentDevelopmentReleaseDate>2 September 2010</currentDevelopmentReleaseDate>
-    <releasedVersions>3.0,2.2.1,2.2.0,2.1.0,2.0.11,2.0.10,2.0.9,2.0.8,2.0.7,2.0.6,2.0.5,2.0.4,2.0.3,2.0.2,2.0.1,2.0</releasedVersions>
-    <developmentVersions>3.0-beta-3,3.0-beta-2,3.0-beta-1,3.0-alpha-7,3.0-alpha-6,3.0-alpha-5,3.0-alpha-4,3.0-alpha-3</developmentVersions>
-    <site.deploy.url>scp://people.apache.org/www/maven.apache.org/</site.deploy.url>
+    <currentStableVersion>3.5.0</currentStableVersion>
+    <currentStableReleaseDate>2017-04-07</currentStableReleaseDate>
+    <current35xVersion>3.5.0</current35xVersion>
+    <current33xVersion>3.3.9</current33xVersion>
+    <current32xVersion>3.2.5</current32xVersion>
+    <current31xVersion>3.1.1</current31xVersion>
+    <current30xVersion>3.0.5</current30xVersion>
+    <currentAntTasksVersion>2.1.3</currentAntTasksVersion>
+    <currentAntTasksReleaseDate>2011-04-17</currentAntTasksReleaseDate>
+    <versions2x>2.2.1,2.2.0,2.1.0,2.0.11,2.0.10,2.0.9,2.0.8,2.0.7,2.0.6,2.0.5,2.0.4,2.0.3,2.0.2,2.0.1,2.0</versions2x>
+    <versions3x>3.5.0,3.5.0-beta-1,3.5.0-alpha-1,3.3.9,3.3.3,3.3.1,3.2.5,3.2.3,3.2.2,3.2.1,3.1.1,3.1.0,3.1.0-alpha-1,3.0.5,3.0.4,3.0.3,3.0.2,3.0.1,3.0,3.0-beta-3,3.0-beta-2,3.0-beta-1,3.0-alpha-7,3.0-alpha-6,3.0-alpha-5,3.0-alpha-4,3.0-alpha-3</versions3x>
+    <site.output>${project.build.directory}/site</site.output>
   </properties>
+
+  <repositories>
+    <repository><!-- useful to resolve parent pom when it is a SNAPSHOT -->
+      <id>apache.snapshots</id>
+      <name>Apache Snapshot Repository</name>
+      <url>https://repository.apache.org/snapshots</url>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+    </repository>
+  </repositories>
 
   <build>
     <pluginManagement>
       <plugins>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-site-plugin</artifactId>
-          <version>2.1.1</version>
+          <artifactId>maven-pdf-plugin</artifactId>
+          <version>1.3</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-pdf-plugin</artifactId>
-          <version>1.1</version>
+          <artifactId>maven-site-plugin</artifactId>
+          <configuration>
+            <siteDirectory>${project.basedir}/content</siteDirectory>
+          </configuration>
         </plugin>
       </plugins>
     </pluginManagement>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>check-site-inheritance</id>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <phase>site</phase>
+            <configuration>
+              <rules>
+                <requireFilesExist>
+                  <message>Generated site should have inherited the correct skin from the parent</message>
+                  <!-- check assumes you've run with "clean" -->
+                  <files>
+                    <file>${project.reporting.outputDirectory}/images/apache-maven-project-2.png</file>
+                  </files>
+                </requireFilesExist>
+              </rules>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-resources-plugin</artifactId>
         <executions>
           <execution>
-            <id>copy-resources</id>
-            <!-- here the phase you need -->
+            <id>copy-filtered-resources</id>
             <phase>pre-site</phase>
             <goals>
               <goal>copy-resources</goal>
             </goals>
             <configuration>
-              <outputDirectory>${basedir}/target/site</outputDirectory>
+              <outputDirectory>${project.reporting.outputDirectory}</outputDirectory>
               <resources>
                 <resource>
-                  <directory>src/site/filtered-resources</directory>
+                  <directory>${project.basedir}/content/filtered-resources</directory>
                   <filtering>true</filtering>
                 </resource>
               </resources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>chmod</id>
+            <phase>site</phase>
+            <goals>
+              <goal>run</goal>
+            </goals>
+            <configuration>
+              <target>
+                <chmod file="${project.reporting.outputDirectory}/download.cgi" perm="ugo+rx"/>
+              </target>
             </configuration>
           </execution>
         </executions>
@@ -323,9 +157,6 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-site-plugin</artifactId>
-        <configuration>
-          <outputEncoding>UTF-8</outputEncoding>
-        </configuration>
         <executions>
           <execution>
             <id>jar</id>
@@ -335,6 +166,9 @@
             </goals>
             <configuration>
               <jarOutputDirectory>${project.reporting.outputDirectory}</jarOutputDirectory>
+              <archiveExcludes>
+                <archiveExclude>*.jar</archiveExclude>
+              </archiveExcludes>
             </configuration>
           </execution>
         </executions>
@@ -344,19 +178,26 @@
 
   <reporting>
     <excludeDefaults>true</excludeDefaults>
+    <outputDirectory>${site.output}</outputDirectory>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-project-info-reports-plugin</artifactId>
         <reportSets>
-          <reportSet>
+          <reportSet><!-- don't execute inherited reports, since some are useless and cannot be removed -->
+            <configuration>
+              <skip>true</skip>
+            </configuration>
+          </reportSet>
+          <reportSet><!-- execute only reports necessary for main site, in a dedicated reportSet -->
+            <id>site-mpir</id>
             <reports>
-              <report>cim</report>
-              <!-- <report>issue-tracking</report> -->
-              <report>mailing-list</report>
-              <report>license</report>
+              <report>index</report>          <!-- xdoc/index.xml.vm -->
               <report>project-team</report>
-              <!-- <report>scm</report> -->
+              <report>mailing-list</report>
+              <report>scm</report>            <!-- xdoc/source-repository.xml -->
+              <report>issue-tracking</report> <!-- markdown/issue-tracking.md -->
+              <report>cim</report>
             </reports>
           </reportSet>
         </reportSets>
@@ -387,6 +228,8 @@
                 </goals>
                 <configuration>
                   <outputDirectory>${project.reporting.outputDirectory}</outputDirectory>
+                  <siteDirectory>${project.basedir}/content</siteDirectory>
+                  <docDescriptor>${project.basedir}/content/pdf.xml</docDescriptor>
                 </configuration>
               </execution>
             </executions>
@@ -432,25 +275,5 @@
         </plugins>
       </reporting>
     </profile>
-    <profile>
-      <id>maven-3</id>
-      <activation>
-        <file>
-          <!--  This employs that the basedir expression is only recognized by Maven 3.x (see MNG-2363) -->
-          <exists>${basedir}</exists>
-        </file>
-      </activation>
-      <build>
-        <pluginManagement>
-          <plugins>
-            <plugin>
-              <groupId>org.apache.maven.plugins</groupId>
-              <artifactId>maven-site-plugin</artifactId>
-              <version>3.0-beta-2</version>
-            </plugin>
-          </plugins>
-        </pluginManagement>
-      </build>
-    </profile>    
   </profiles>
 </project>
